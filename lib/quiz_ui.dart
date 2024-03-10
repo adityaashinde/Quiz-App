@@ -173,7 +173,52 @@ class _QuizUIState extends State<QuizUI> {
         ),
       );
     } else {
-      return const Scaffold();
+      return Scaffold(
+        backgroundColor: Colors.deepPurple.shade100,
+        appBar: AppBar(
+          title: const Text(
+            "Quizz App",
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.deepPurple.shade300,
+        ),
+        body: Column(
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            Image.network(
+              "https://img.freepik.com/premium-vector/winner-trophy-cup-with-ribbon-confetti_51486-122.jpg",
+              height: 500,
+              width: 380,
+            ),
+            const Text(
+              "Congratulation's",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "You have completed the Quiz!!",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
+      );
     }
   }
 
